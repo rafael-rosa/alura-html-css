@@ -1,0 +1,33 @@
+blockquote{
+	background-color: #D9E5E3;
+	border: 10px solid #C2CCCA;
+	width: 250px;
+	box-sizing: border-box;
+	margin: 20px 40px;
+	/*border-bottom-color: #333;
+	border-right-color: transparent;*/
+}
+
+cite{
+	font-style: italic;
+	float: right;
+	/*Outra forma de alinhar o autor a direita*/
+	/*display: block;
+	text-align: right*/
+}
+
+
+/*
+Os nomes fiat e petrobras remetem ao conteúdo desses elementos. Assim, esses nomes só perderão o sentido se mudarmos o conteúdo da página, o que dificilmente acontece.
+Se usarmos os nomes direita e esquerda, acabaremos com nomes de classes muito genéricos que possivelmente perderão o sentido quando resolvermos alterar algum detalhe no visual da página. 
+A única vantagem desses nomes é que, por serem genéricos, são bem reaproveitáveis. Podemos usá-los em quaisquer elementos que queiramos fazer flutuar à direita ou à esquerda.
+Porém, nosso HTML começará a ter código relativo à visualização, ou seja, começaremos a misturar conteúdo e visualização.
+*/
+
+.fiat{		/*Nomes de classes devem sempre transmitir a ideia do conteudo*/
+	float: right;
+}
+
+.petrobras{
+	float: left;
+}

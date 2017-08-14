@@ -1,0 +1,21 @@
+main article{
+	border-bottom: 1px solid #ccc;
+	/*margin: 50px 0;*/
+	margin-bottom: 20px; /*Espaço entre a borda e o proximo elemento*/
+	padding-bottom: 30px; /*Espaço entre o artigo e a borda*/
+}
+
+main a {
+	color: #851944;
+}
+
+.link-leia-mais{
+	font-size: 24px;
+	padding: 8px;
+	margin: 16px;
+	background-color: #E6E7E8;
+	text-align: center;
+	text-decoration: none;
+	display: block; /*Ocupar toda a linha*/
+
+}

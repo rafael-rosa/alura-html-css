@@ -1,0 +1,145 @@
+body{
+	font-family: "Crimson Text","Times New Roman", serif;
+	background-color: #F2FFFC;
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+h1,h2{
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+h2{
+	font-size: 30px;
+	clear: both;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.clearfix{ /*nome de classe bastante comum utilizada para empurrar conteudos para baixo dos floats*/
+	clear: both;
+}
+
+
+.titulo-principal{
+	text-align: center;
+	color: #FFF;
+	background-color: #851944;
+	padding: 25px;
+	border-bottom: 10px solid #000 /*black*/;
+	font-size: 60px;
+	text-transform: uppercase;
+}
+
+.menu-navegacao a{
+	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
+	text-transform: lowercase;
+}
+
+.icones-sociais li{
+	display: inline-block;
+}
+
+.icones-sociais a{
+	display: block; /*Neste caso específico podemos usar display:block também porque embora a tag <a> esteja com block, o que faria os ícones aparecer um em cima do outro, a tag <li> está com inline-block, o que faz os itens da lista aparecer em linha.*/
+	height: 40px;
+	width: 40px;
+	text-indent: -99999px; /*image-replacement*/
+	/*font-size: 0;*/ /*mesmo efeito do text-indent - image-replacement - Alguns navegadores exibem mesmo com valor 0*/
+}
+
+.icone-github{
+	background-image: url(../img/github.png);
+}
+
+.icone-twitter{
+	background-image: url(../img/twitter.png);
+}
+
+.icone-linkedin{
+	background-image: url(../img/linkedin.png);
+}
+
+.conteudo-principal{
+	width: 720px;
+	/*width: 80%;*/
+	margin-left: auto;
+	margin-right: auto;
+	/*margin: auto; Mesmo efeito*/
+	/*margin: 0 auto; Mesmo efeito, 0 para inf e sup e auto para os lados */
+	padding: 30px 0;
+	padding-bottom: 80px;
+}
+
+.menu-navegacao{
+	background-color: #3C1D3D;
+	color: #F2FFFC;
+	text-align: center;
+	border: 10px solid black;
+	float: right;
+	/*clear: right;*/
+	width: 15%;
+	box-sizing: border-box;
+	position: relative; /*Relative considera a posicao do elemento na pagina*/
+	top: 310px;
+	/*Eh possivel posicionar o menu usando somente position sem float*/
+	/*position: absolute;
+    top: 310px;
+    right: 0;*/
+
+}
+
+.foto-joao{
+	border: 10px solid black;
+	float: right;
+	/*width: 15%;*/
+	box-sizing: border-box;
+	position: absolute; /*Absolute tira o elemento do fluxo e o posicionamento é em relacao a janela do navegador*/
+	top: 0px;
+	right: 0px;
+}
+
+main{
+	float: left;
+	width: 85%;
+}
+
+.rodape-pagina{
+	background-color: #000;
+	color: #F2FFFC;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
+
+p{
+	text-align: justify;
+	margin: 20px 0;
+}
+
+
+
+blockquote,aside,footer{
+	padding: 20px;
+}
+
+
+nav h1{
+	font-size: 30px;
+	margin-bottom: : 25px;
+}
+
+/*
+*{ todos os elementos
+	display: inline;
+}
+*/

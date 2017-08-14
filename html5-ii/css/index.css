@@ -1,0 +1,270 @@
+html{
+    height: 100%;       /*Necessario para que o paralaxe das palavras funcione*/
+    overflow-x: hidden;  /*Necessario para que o paralaxe das palavras funcione*/
+}
+body{
+    text-indent: 2rem;
+    perspective: 14px; /*Sem a perspectiva, o translateZ nao funciona.*/
+    height: 100%;       /*Necessario para que o paralaxe das palavras funcione*/
+    perspective-origin: 50% 160px; /*Necessario para que o paralaxe das palavras funcione*/
+    overflow-x: hidden; /*Necessario para que o paralaxe das palavras funcione*/
+
+}
+header{
+    position: relative;   
+}
+.saudacao-ultima-linha em{
+    display: inline-block;
+    transform: rotate(-5deg) skew(-10deg);
+    text-indent: 0;
+}
+.banner-twitter{
+    border: .2em black solid;
+    color: white;
+    background-color: #3C1D3D;
+    text-decoration: none;
+    font-weight: bold;
+    text-indent: 0;
+    text-align: center;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    font-size: 1.2em;
+
+    transform-origin: 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 14em;
+    line-height: 1;
+
+    padding: 1em 0;
+    box-sizing: border-box;
+    transform:  translate(6.5765em, -2.4745em) rotate(45deg); /*Na horizontal: cos(45) * (altura - largura) + largura
+                                                                Na vertical: -1 * sen(45) * altura*/
+}
+.titulo-principal ul{
+    transform-style: preserve-3d; /*Como a perspectiva esta no body, preciso disto para funcionar o translateZ.*/
+    position: absolute; /*Apos adicionar a perspectiva, eh necessario fazer o ul ocupar todo o espaco do cabecalho*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*width: 100%; Alternativa ao bottom e right 0
+    height: 100%;*/
+}
+.foto-home {
+    height: 200px;
+    -webkit-border-radius: 50%;/*100px;*/ /*50% foto redonda*/
+    -moz-border-radius: 50%;/*100px;*/ 
+    border-radius: 10% 50% / 50% 10%;/*100px;*/ /*Foto inclinada*/
+}.palavra-home{
+    color: #D5447E;
+    /*color: rgba(255, 127, 127, 0.5);*/
+    font-family: "Shadows Into Light", sans-serif;
+    position: absolute;
+    font-weight: bold;
+    font-size: 400%; /*As palavras são aumentadas para que quando for aplicado o translateZ elas nao percam qualidade*/
+}
+.eficiencia{
+    top: 30%;
+    left: 70%;
+    opacity: 0.5;
+    -webkit-transform: translate(-50%, -50%) translateZ(5px) rotate(25deg) scale(0.25); /*Translate 50 50 serve para caso o tamanho das palavras mude de novo, nao precisemos reposicionar*/
+    transform: translate(-50%, -50%) translateZ(5px) rotate(25deg) scale(0.25);  /*0.25 por causa do font-size 400*/
+}
+.boas-praticas{
+    top: 53%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%) translateZ(7px) rotate(5deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(7px) rotate(5deg) scale(0.25);
+}
+.codigo-limpo{
+    top: 60%;
+    left: 70%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(6px) rotate(-17deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(6px) rotate(-17deg) scale(0.25);
+}
+.css3{
+    top: 42%;
+    left: 58%;
+    -webkit-transform: translate(-50%, -50%) translateZ(8px) rotate(-10deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(8px) rotate(-10deg) scale(0.25);
+}
+.html5{
+    top: 20%;
+    left: 57%;
+    opacity: .7;
+    -webkit-transform: translate(-50%, -50%) translateZ(5px) rotate(5deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(5px) rotate(5deg) scale(0.25);
+}
+.javascript{
+    top: 20%;
+    right: 55%;
+    opacity: .4;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-30deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(2px) rotate(-30deg) scale(0.25);
+}
+.acessibilidade{
+    top: 43%;
+    right: 31%;
+    -webkit-transform: translate(-50%, -50%) translateZ(10px) rotate(-10deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(10px) rotate(-10deg) scale(0.25);
+}
+.responsivo{
+    top: 45%;
+    right: 36%;
+    -webkit-transform: translate(-50%, -50%) translateZ(11px) rotate(17deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(11px) rotate(17deg) scale(0.25);
+}
+.otimizacoes{
+    top: 5%;
+    right: 60%;
+    opacity: .3;
+    transform: rotate(-15deg) scale(0.25);
+}
+.agilidade{
+    top: 40%;
+    right: 60%;
+    opacity: .5;
+    -webkit-transform: translate(-50%, -50%) translateZ(5px) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(5px) scale(0.25);
+}
+.design{
+    top: 15%;
+    right: 65%;
+    opacity: .5;
+    -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(15deg) scale(0.25);
+    transform: translate(-50%, -50%) translateZ(4px) rotate(15deg) scale(0.25);
+}
+
+.saudacao{
+    width: 90ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+.saudacao p {
+    color: #99A;
+    line-height: 1;
+}
+.saudacao strong{
+    font-size: 3rem;
+}
+.saudacao-inicio {
+    color: #889;
+    font-size: 4rem;
+}
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+}
+.saudacao strong {
+    color: #000;
+}
+.saudacao em {
+    color: #851944;
+    font-size: 4rem;
+}
+.botao-index {
+    background-color: #851944;
+    color: #FFF;
+    border: .2em solid black;
+    width: 400px;
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    text-indent: 0;
+}
+.secao-inicio h2 {
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    overflow: hidden;
+    border: 10px solid black;
+}
+.trabalhos li {
+    float: left;
+    width: 33.333%;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: 10px solid #851944;
+    position: relative;
+}
+.blog li a {
+    color: #FCF;
+}
+footer {
+    background-color: #000;
+    color: #FFF;
+    /*padding-top: 1em;*/
+    padding-bottom: 2em;
+}
+footer a {
+    color: #F99;
+}
+main {
+    width: 100%;
+    padding-bottom: 0;
+    float: none;
+}
+
+h2{
+    font-size: 3rem;
+    padding-top: 2rem;
+}
+
+small{
+    padding-left: 2rem;
+}
+
+ul,ol{
+    margin-top: 2rem;
+}
+
+a{
+    line-height: 3;
+}
+
+
+.inicio-post{
+    position: absolute;
+    background-color: #F2FFFC;
+    top: 5em;
+    right: 4em;
+    left: 30%;
+    height: 8em;
+    padding: 1em;
+    text-indent: 0;
+    color: black;
+}
+
+.post-mais-recente{
+    background-color: #F2FFFC;
+    width: 30%;
+}
+
+.blog .post-mais-recente a {
+    color: #F26; 
+}
